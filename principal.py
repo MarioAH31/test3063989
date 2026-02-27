@@ -1,4 +1,6 @@
 import os
+from saludo import saludo
+from despedida import despedida
 
 def limpiar():
     os.system("cls")
@@ -13,11 +15,11 @@ def menu():
         match opcion:
             case 1:
                 limpiar()
-                print("Hola, ¿cómo estás?")
+                saludo()
                 input("Presiona Enter para continuar...")
             case 2:
                 limpiar()
-                print("Hasta luego, ¡vuelve pronto!")
+                despedida()
                 input("Presiona Enter para continuar...")
             case 3:
                 limpiar()
@@ -28,5 +30,8 @@ def menu():
                 print("Opción no válida. Intente nuevamente.")
                 limpiar()
 
-menu()
-print("Programa finalizado.")
+if __name__ == "__main__":
+    menu()
+
+# menu()
+# print("Programa finalizado.")
