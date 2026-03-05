@@ -1,6 +1,7 @@
 import os
 from saludo import saludo
 from despedida import despedida
+from trabajando import trabajando 
 
 def limpiar():
     os.system("cls")
@@ -9,7 +10,8 @@ def menu():
     while True:
         print("1. Saludar")
         print("2. Despedirse")
-        print("3. Salir\n")
+        print("3. Trabajar")
+        print("4. Salir\n")
 
         opcion = int(input("Digite una opcion: "))
         match opcion:
@@ -22,6 +24,10 @@ def menu():
                 despedida()
                 input("Presiona Enter para continuar...")
             case 3:
+                limpiar()
+                trabajando()
+                input("Presiona Enter para continuar...")
+            case 4:
                 limpiar()
                 print("Saliendo del programa...")
                 input("Presiona Enter para continuar...")
